@@ -4,6 +4,5 @@
 * [(주)모우다](https://mouda.kr)(개발팀원) - 입사 __16.06.29__ ~ 현재
 
 ```
-HTML5, CSS3, JavsScript, jQuery, React.js, node.js, MySql, Java, SpringFramewor ...
+HTML5, CSS3, JavsScript, jQuery, React.js, node.js, MySql, Java, SpringFramework ...
 ```
-
