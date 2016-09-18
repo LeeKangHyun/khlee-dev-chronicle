@@ -4,3 +4,4 @@ database.rules.json
 firebase.json
 .eslintrc.*
 .eslintignore
+.babelrc
