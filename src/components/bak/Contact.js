@@ -5,16 +5,13 @@ import ContactCreator from './ContactCreator';
 import ContactRemover from './ContactRemover';
 import ContactEditor from './ContactEditor';
 
+require('../stylesheets/components/contact.scss');
+
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      contactData: [
-        {name: 'Abet', phone: '010-0000-0001'},
-        {name: 'Betty', phone: '010-0000-0002'},
-        {name: 'Charlie', phone: '010-0000-0003'},
-        {name: 'David', phone: '010-0000-0004'}
-      ],
+      contactData: [],
       selectedKey: -1,
       selected: {
         name: '',
@@ -96,7 +93,7 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div>
-        <h1>Contacts</h1>
+        <h1>Todo 리스트</h1>
         <ul>
           {this.state.contactData.map((contact, i) => {
             return (

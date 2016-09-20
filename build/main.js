@@ -31,6 +31,10 @@ if (process.env.NODE_ENV == 'development') {
 
 app.use('/', _express2.default.static(__dirname + '/../public'));
 
+app.get('*', function (request, response) {
+  response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+
 var server = app.listen(port, function () {
   console.log('Express listening on port', port);
 });

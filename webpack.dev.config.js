@@ -1,10 +1,11 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [
     './src/index.js',
     'webpack-dev-server/client?http://0.0.0.0:3001',
-    'webpack/hot/only-dev-server'
+    'webpack/hot/dev-server'
   ],
 
   output: {
@@ -40,7 +41,14 @@ module.exports = {
           presets: ['es2015', 'react'],
           plugins: ['react-hot-loader/babel']
         }
+      },
+      {
+        test   : /\.(scss|css)$/,
+        loaders: ['style', 'css', 'sass']
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, 'src', 'stylesheets')]
   }
 };

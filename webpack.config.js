@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
   // 가장 처음 읽을 스크립트파일
   // 여기서부터 import 되어있는 다른 스크립트를 불러온다.
@@ -20,7 +22,14 @@ module.exports = {
           cacheDirectory: true,
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test   : /\.(scss|css)$/,
+        loaders: ['style', 'css', 'sass']
       }
     ]
+  },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, 'src', 'stylesheets')]
   }
 };
