@@ -11,6 +11,17 @@ export default class TodoList extends React.Component {
           <div id = 'todolist__txt' className = 'box-sizing shadow'>
             <text>강현이의 좀 더 쉬운 개발을 위한 사이트</text>
             <h2>개발중...</h2>
+            <ul>
+              <li>
+                <div>
+                  <div>멍청이</div>
+                  <div>바보</div>
+                </div>
+              </li>
+              <li>
+                <div>asdf</div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
