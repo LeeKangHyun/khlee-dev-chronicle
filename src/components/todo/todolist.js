@@ -6,16 +6,15 @@ export default class TodoList extends React.Component {
   render() {
     return (
       <div id = 'todolist' className = 'box-sizing shadow'>
-        <h1 className = 'inline-block'>해야 할 일</h1>
+        <h1 className = 'inline-block'>Todo List</h1>
         <div>
           <div id = 'todolist__txt' className = 'box-sizing shadow'>
-            <text>강현이의 좀 더 쉬운 개발을 위한 사이트</text>
-            <h2>개발중...</h2>
+            <h2>메롱</h2>
             <ul>
               <li>
                 <div>
-                  <div>멍청이</div>
-                  <div>바보</div>
+                  <div>SH's</div>
+                  <div>poor</div>
                 </div>
               </li>
               <li>
