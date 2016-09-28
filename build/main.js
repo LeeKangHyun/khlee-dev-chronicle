@@ -14,6 +14,7 @@ var _webpack2 = _interopRequireDefault(_webpack);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var path = require('path');
 var app = (0, _express2.default)();
 var port = 3000;
 var devPort = 3001;
@@ -31,8 +32,8 @@ if (process.env.NODE_ENV == 'development') {
 
 app.use('/', _express2.default.static(__dirname + '/../public'));
 
-app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+app.get('*', function (req, res) {
+  res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));
 });
 
 var server = app.listen(port, function () {

@@ -2,6 +2,7 @@ import express from 'express';
 import WebpackDevServer from 'webpack-dev-server';
 import webpack from 'webpack';
 
+const path = require('path');
 const app = express();
 const port = 3000;
 const devPort = 3001;
@@ -19,8 +20,8 @@ if(process.env.NODE_ENV == 'development') {
 
 app.use('/', express.static(__dirname + '/../public'));
 
-app.get('*', function (request, response) {
-  response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+app.get('*', function (req, res) {
+  res.sendFile(path.resolve(__dirname, '..', 'public', 'index.html'));
 });
 
 const server = app.listen(port, () => {

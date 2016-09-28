@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 // 기본 페이지
 import App from '../App';
-import TodoList from '../components/todo/todolist';
 
 // 자바스크립트
 import JsMain from '../components/JS/JsMain';
@@ -20,7 +19,6 @@ import ReduxMain from '../components/Redux/ReduxMain';
 
 module.exports =
   <Route path='/' component={App}>
-    <IndexRoute component={TodoList} />
     <Route path='javaScript' component={JsMain} />
     <Route path='react' component={ReactMain} />
     <Route path='node' component={NodeMain} />

@@ -28902,10 +28902,6 @@
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _todolist = __webpack_require__(274);
-
-	var _todolist2 = _interopRequireDefault(_todolist);
-
 	var _JsMain = __webpack_require__(277);
 
 	var _JsMain2 = _interopRequireDefault(_JsMain);
@@ -28928,13 +28924,9 @@
 
 
 	// 자바스크립트
-
-
-	// 기본 페이지
 	module.exports = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: _App2.default },
-	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _todolist2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: 'javaScript', component: _JsMain2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: 'react', component: _ReactMain2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: 'node', component: _NodeMain2.default }),
@@ -28945,6 +28937,9 @@
 
 
 	// 리액트
+
+
+	// 기본 페이지
 
 /***/ },
 /* 265 */
@@ -28976,6 +28971,10 @@
 
 	var _Option2 = _interopRequireDefault(_Option);
 
+	var _todolist = __webpack_require__(270);
+
+	var _todolist2 = _interopRequireDefault(_todolist);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28984,7 +28983,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(270);
+	__webpack_require__(275);
 
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
@@ -29004,6 +29003,7 @@
 	        _react2.default.createElement(_Counter2.default, null),
 	        _react2.default.createElement(_Buttons2.default, null),
 	        _react2.default.createElement(_Option2.default, null),
+	        _react2.default.createElement(_todolist2.default, null),
 	        this.props.children
 	      );
 	    }
@@ -29281,20 +29281,157 @@
 /* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	__webpack_require__(271);
+
+	var TodoList = function (_React$Component) {
+	  _inherits(TodoList, _React$Component);
+
+	  function TodoList() {
+	    _classCallCheck(this, TodoList);
+
+	    return _possibleConstructorReturn(this, (TodoList.__proto__ || Object.getPrototypeOf(TodoList)).apply(this, arguments));
+	  }
+
+	  _createClass(TodoList, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { id: 'todolist', className: 'box-sizing shadow' },
+	        _react2.default.createElement(
+	          'h1',
+	          { className: 'inline-block' },
+	          '개발 이야기'
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'todolist__txt', className: 'box-sizing shadow' },
+	            _react2.default.createElement(
+	              'ul',
+	              null,
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: '/javaScript' },
+	                      '자바스크립트'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: '/react' },
+	                      '리액트'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: '/node' },
+	                      '노드'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'div',
+	                  null,
+	                  _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: '/redux' },
+	                      '리덕스'
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return TodoList;
+	}(_react2.default.Component);
+
+	exports.default = TodoList;
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(271);
+	var content = __webpack_require__(272);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(273)(content, {});
+	var update = __webpack_require__(274)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./common.scss", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./common.scss");
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./todo.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./todo.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -29304,22 +29441,21 @@
 	}
 
 /***/ },
-/* 271 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(272)();
+	exports = module.exports = __webpack_require__(273)();
 	// imports
-	exports.push([module.id, "@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css);", ""]);
-	exports.push([module.id, "@import url(https://cdn.jsdelivr.net/font-nanumlight/1.0/nanumbarungothicweb.css);", ""]);
+
 
 	// module
-	exports.push([module.id, "body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  background-color: #f0eee9;\n  font-family: 'NanumBarunGothic';\n  font-weight: 400;\n  font-size: 16px;\n  line-height: normal; }\n\na {\n  text-decoration: none; }\n  a:link {\n    color: black; }\n  a:visited {\n    color: black;\n    text-decoration: none; }\n  a:hover {\n    color: #F4C5C5; }\n\n.box-sizing {\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box; }\n\n.inline-block {\n  display: inline-block; }\n\n.shadow {\n  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); }\n", ""]);
+	exports.push([module.id, "#todolist {\n  width: 45%;\n  min-width: 320px;\n  margin: 0 auto;\n  padding: 25px 0;\n  background-color: #8AA0CC;\n  text-align: center;\n  cursor: default; }\n  #todolist h1 {\n    margin-top: 0; }\n  #todolist > div {\n    width: 80%;\n    margin: 0 auto;\n    background-color: white; }\n\n#todolist__txt {\n  padding: 10px 0; }\n  #todolist__txt ul {\n    padding: 0;\n    list-style-type: none; }\n    #todolist__txt ul > li {\n      display: inline-block;\n      width: calc(100% / 4); }\n      #todolist__txt ul > li > div > div {\n        display: inline-block; }\n        #todolist__txt ul > li > div > div:first-child {\n          margin-right: 10px; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports) {
 
 	/*
@@ -29375,7 +29511,7 @@
 
 
 /***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -29627,143 +29763,6 @@
 
 
 /***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	__webpack_require__(275);
-
-	var TodoList = function (_React$Component) {
-	  _inherits(TodoList, _React$Component);
-
-	  function TodoList() {
-	    _classCallCheck(this, TodoList);
-
-	    return _possibleConstructorReturn(this, (TodoList.__proto__ || Object.getPrototypeOf(TodoList)).apply(this, arguments));
-	  }
-
-	  _createClass(TodoList, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { id: 'todolist', className: 'box-sizing shadow' },
-	        _react2.default.createElement(
-	          'h1',
-	          { className: 'inline-block' },
-	          '개발 이야기'
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'div',
-	            { id: 'todolist__txt', className: 'box-sizing shadow' },
-	            _react2.default.createElement(
-	              'ul',
-	              null,
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  _react2.default.createElement(
-	                    'div',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: '/javaScript' },
-	                      '자바스크립트'
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  _react2.default.createElement(
-	                    'div',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: '/react' },
-	                      '리액트'
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  _react2.default.createElement(
-	                    'div',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: '/node' },
-	                      '노드'
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  null,
-	                  _react2.default.createElement(
-	                    'div',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: '/redux' },
-	                      '리덕스'
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return TodoList;
-	}(_react2.default.Component);
-
-	exports.default = TodoList;
-
-/***/ },
 /* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -29773,14 +29772,14 @@
 	var content = __webpack_require__(276);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(273)(content, {});
+	var update = __webpack_require__(274)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./todo.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./todo.scss");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./common.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./common.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -29793,12 +29792,13 @@
 /* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(272)();
+	exports = module.exports = __webpack_require__(273)();
 	// imports
-
+	exports.push([module.id, "@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css);", ""]);
+	exports.push([module.id, "@import url(https://cdn.jsdelivr.net/font-nanumlight/1.0/nanumbarungothicweb.css);", ""]);
 
 	// module
-	exports.push([module.id, "#todolist {\n  width: 45%;\n  min-width: 320px;\n  margin: 0 auto;\n  padding: 25px 0;\n  background-color: #8AA0CC;\n  text-align: center;\n  cursor: default; }\n  #todolist h1 {\n    margin-top: 0; }\n  #todolist > div {\n    width: 80%;\n    margin: 0 auto;\n    background-color: white; }\n\n#todolist__txt {\n  padding: 10px 0; }\n  #todolist__txt ul {\n    padding: 0;\n    list-style-type: none; }\n    #todolist__txt ul > li {\n      display: inline-block;\n      width: calc(100% / 4); }\n      #todolist__txt ul > li > div > div {\n        display: inline-block; }\n        #todolist__txt ul > li > div > div:first-child {\n          margin-right: 10px; }\n", ""]);
+	exports.push([module.id, "body {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  background-color: #f0eee9;\n  font-family: 'NanumBarunGothic';\n  font-weight: 400;\n  font-size: 16px;\n  line-height: normal; }\n\na {\n  text-decoration: none; }\n  a:link {\n    color: black; }\n  a:visited {\n    color: black;\n    text-decoration: none; }\n  a:hover {\n    color: #F4C5C5; }\n\n.box-sizing {\n  box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  -webkit-box-sizing: border-box; }\n\n.inline-block {\n  display: inline-block; }\n\n.shadow {\n  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); }\n", ""]);
 
 	// exports
 
