@@ -64,7 +64,7 @@
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _reducers = __webpack_require__(277);
+	var _reducers = __webpack_require__(278);
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -28906,12 +28906,17 @@
 
 	var _todolist2 = _interopRequireDefault(_todolist);
 
+	var _JsMain = __webpack_require__(277);
+
+	var _JsMain2 = _interopRequireDefault(_JsMain);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	module.exports = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: _App2.default },
-	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _todolist2.default })
+	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _todolist2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: '/javaScript', component: _JsMain2.default })
 	);
 
 /***/ },
@@ -29735,6 +29740,12 @@
 
 /***/ },
 /* 277 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+/***/ },
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29745,7 +29756,7 @@
 
 	var _redux = __webpack_require__(235);
 
-	var _reducer = __webpack_require__(278);
+	var _reducer = __webpack_require__(279);
 
 	var rootReducer = (0, _redux.combineReducers)({
 	  /*
@@ -29758,7 +29769,7 @@
 	exports.default = rootReducer;
 
 /***/ },
-/* 278 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
