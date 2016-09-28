@@ -1,6 +1,6 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css);
 @import url(https://cdn.jsdelivr.net/font-nanumlight/1.0/nanumbarungothicweb.css);
-@import "../stylesheets/color.scss";
+@import "./color.scss";
 
 body {
   width: 100%;
@@ -12,7 +12,19 @@ body {
   font-size: 16px;
   line-height: normal;
 }
-
+a {
+  text-decoration: none;
+  &:link {
+    color: black;
+  }
+  &:visited {
+    color: black;
+    text-decoration: none;
+  }
+  &:hover {
+    color: $pink;
+  }
+}
 .box-sizing {
   box-sizing: border-box;
   -moz-box-sizing: border-box;

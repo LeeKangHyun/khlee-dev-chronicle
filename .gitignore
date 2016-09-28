@@ -5,3 +5,4 @@ firebase.json
 .eslintrc.*
 .eslintignore
 .babelrc
+public/bundle.js
