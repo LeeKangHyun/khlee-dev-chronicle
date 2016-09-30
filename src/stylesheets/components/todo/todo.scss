@@ -1,25 +1,29 @@
 @import "../../color.scss";
 
 #todolist {
-  width: 45%;
-  min-width: 320px;
-  margin: 0 auto;
+  width: 100%;
   padding: 25px 0;
   background-color: $blue;
   text-align: center;
   cursor: default;
   h1 {
-    margin-top: 0;
+    margin: 0;
+    > a {
+      &:hover {
+        color: currentColor !important;
+      }
+    }
   }
   > div {
-    width: 80%;
+    width: 60%;
+    min-width: 320px;
     margin: 0 auto;
     background-color: white;
   }
 }
 
 #todolist__txt {
-  padding: 10px 0;
+  padding: 5px 0;
   ul {
     padding: 0;
     list-style-type: none;

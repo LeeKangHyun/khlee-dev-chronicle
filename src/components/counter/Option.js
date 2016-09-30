@@ -40,6 +40,4 @@ let mapDispatchToProps = (dispatch) => {
   };
 };
 
-Option = connect(undefined, mapDispatchToProps)(Option);
-
-export default Option;
+export default connect(undefined, mapDispatchToProps)(Option);

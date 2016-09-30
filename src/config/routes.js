@@ -16,6 +16,7 @@ import NodeMain from '../components/Node/NodeMain';
 
 // 리덕스
 import ReduxMain from '../components/Redux/ReduxMain';
+import Counter from '../components/counter/Counter';
 
 module.exports =
   <Route path='/' component={App}>
@@ -23,5 +24,6 @@ module.exports =
     <Route path='react' component={ReactMain} />
     <Route path='node' component={NodeMain} />
     <Route path='redux' component={ReduxMain} />
+    <Route path='redux/counter' component={Counter} />
   </Route>
 ;

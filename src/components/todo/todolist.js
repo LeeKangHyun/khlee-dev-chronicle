@@ -7,7 +7,7 @@ export default class TodoList extends React.Component {
   render() {
     return (
       <div id = 'todolist' className = 'box-sizing shadow'>
-        <h1 className = 'inline-block'>개발 이야기</h1>
+        <h1 className = 'inline-block'><Link to = '/'>개발 이야기</Link></h1>
         <div>
           <div id = 'todolist__txt' className = 'box-sizing shadow'>
             <ul>
@@ -28,7 +28,7 @@ export default class TodoList extends React.Component {
               </li>
               <li>
                 <div>
-                  <div><Link to = '/redux'>리덕스</Link></div>
+                  <div><Link to = '/redux'>링딩동</Link></div>
                 </div>
               </li>
             </ul>

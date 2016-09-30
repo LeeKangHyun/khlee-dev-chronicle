@@ -10,4 +10,4 @@ const rootReducer = combineReducers({
   extra
 });
 
-export default rootReducer;
+module.exports = rootReducer;

@@ -30,6 +30,4 @@ let mapDispatchToProps = (dispatch) => {
   };
 };
 
-Button = connect(undefined, mapDispatchToProps)(Button);
-
-export default Button;
+export default connect(undefined, mapDispatchToProps)(Button);
