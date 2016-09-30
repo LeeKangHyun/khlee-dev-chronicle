@@ -23,7 +23,8 @@ module.exports =
     <Route path='javaScript' component={JsMain} />
     <Route path='react' component={ReactMain} />
     <Route path='node' component={NodeMain} />
-    <Route path='redux' component={ReduxMain} />
-    <Route path='redux/counter' component={Counter} />
+    <Route path='redux' component={ReduxMain}>
+      <Route path='/counter' component={Counter} />
+    </Route>
   </Route>
 ;
