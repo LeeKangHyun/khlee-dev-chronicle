@@ -8,7 +8,8 @@ class Counter extends React.Component {
   render() {
     return (
       <div>
-        <h1>VALUE: {this.props.value}</h1>
+        <h1>허접한 계산기</h1>
+        <h2>VALUE: {this.props.value}</h2>
         <Button />
         <Option />
       </div>

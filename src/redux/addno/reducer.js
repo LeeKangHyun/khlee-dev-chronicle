@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, SET_DIFF } from './action';
+import { INCREMENT, DECREMENT, MULTIPLE, DIVISION, SET_DIFF, ZERO_DIFF } from './action';
 
 const counterInitialState = {
   value: 0,
@@ -15,9 +15,21 @@ export const counter = (state = counterInitialState, action) => {
     return Object.assign({}, state, {
       value: state.value - state.diff
     });
+  case MULTIPLE:
+    return Object.assign({}, state, {
+      value: state.value * state.diff
+    });
+  case DIVISION:
+    return Object.assign({}, state, {
+      value: state.value / state.diff
+    });
   case SET_DIFF:
     return Object.assign({}, state, {
       diff: action.diff
+    });
+  case ZERO_DIFF:
+    return Object.assign({}, state, {
+      value: 0
     });
   default:
     return state;

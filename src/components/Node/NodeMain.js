@@ -4,7 +4,8 @@ export default class NodeMain extends React.Component {
   render() {
     return (
       <div>
-        <h1>Node.js</h1>
+        <h1>Node.js 공부</h1>
+        { this.props.children }
       </div>
     );
   }

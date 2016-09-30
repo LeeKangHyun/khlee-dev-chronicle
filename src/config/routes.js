@@ -20,9 +20,18 @@ import Counter from '../components/counter/Counter';
 
 module.exports =
   <Route path='/' component={App}>
-    <Route path='javaScript' component={JsMain} />
-    <Route path='react' component={ReactMain} />
-    <Route path='node' component={NodeMain} />
+    <Route path='javaScript' component={JsMain}>
+
+    </Route>
+    
+    <Route path='react' component={ReactMain}>
+
+    </Route>
+
+    <Route path='node' component={NodeMain}>
+
+    </Route>
+
     <Route path='redux' component={ReduxMain}>
       <Route path='/counter' component={Counter} />
     </Route>
