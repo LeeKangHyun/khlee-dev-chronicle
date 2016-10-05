@@ -1,0 +1,27 @@
+@import '../../color.scss';
+
+#Board {
+  width: 60%;
+  margin: 0 auto;
+  #Board-select {
+    width: 15%;
+    margin-right: 3%;
+  }
+  #Board-input {
+    width: 22%;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  #Board-txt {
+    display: block;
+    width: 40%;
+    margin: 25px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    resize: none;
+  }
+}

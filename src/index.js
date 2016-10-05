@@ -4,11 +4,13 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import routes from './config/routes';
+import firebaseInit from './firebase/config';
 
 import counterApp from './redux/reducers';
 
 const store = createStore(counterApp);
 
+firebaseInit();
 init();
 
 function init() {

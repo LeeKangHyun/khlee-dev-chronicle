@@ -56,3 +56,33 @@ button {
     opacity: 0.8;
   }
 }
+.content-list {
+  width: 80%;
+  min-width: 300px;
+  margin: 0 auto;
+  padding: 5px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  > div {
+    display: inline-block;
+    cursor: pointer;
+    &:first-child {
+      width: 5%;
+    }
+    &:nth-child(2) {
+      width: 75%;
+      text-align: left;
+    }
+    &:last-child {
+      width: 20%;
+    }
+  }
+  &:hover {
+    background-color: $green;
+    color: white;
+  }
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}

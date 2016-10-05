@@ -8,6 +8,7 @@ export default class TodoList extends React.Component {
     return (
       <div id = 'todolist' className = 'box-sizing shadow'>
         <h1 className = 'inline-block'><Link to = '/'>개발 이야기</Link></h1>
+        <h2><Link to = '/board'>게시글 작성</Link></h2>
         <div>
           <div id = 'todolist__txt' className = 'box-sizing shadow'>
             <ul>
