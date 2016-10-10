@@ -13,6 +13,13 @@ module.exports = {
 
   // ES6 문법과 JSX 문법을 사용한다
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: 'eslint',
+        exclude: /(node_modules|bower_components)/
+      }
+    ],
     loaders: [
       {
         test: /\.js$/,
@@ -20,7 +27,7 @@ module.exports = {
         exclude: /node_modules/,
         query: {
           cacheDirectory: true,
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react', 'stage-0']
         }
       },
       {

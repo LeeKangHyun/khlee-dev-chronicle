@@ -18,20 +18,15 @@ class JsMain extends React.Component {
   componentDidMount() {
     var jsData = firebase.database().ref('Board/javaScript');
     jsData.on('value', snapshot => {
-      var board = snapshot.val();
-      this.setState({
-        list: Object.keys(board || {}).map(key => board[key])
-      });
+      this.setState({list: snapshot.val()});
     });
   }
 
   render() {
-    var data = this.state.list;
-
     return (
       <div id = 'JsMain' className = 'shadow'>
         <h1>JavaScript 공부</h1>
-        { data && Object.keys(data).map( (key, index) => {
+        { Object.keys(this.state.list).slice().map( (key, index) => {
           let item = this.state.list[key];
           return (
             <div className = 'content-list' key = { key }>

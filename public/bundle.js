@@ -29300,7 +29300,12 @@
 
 	      var jsData = _firebase2.default.database().ref('Board/javaScript');
 	      jsData.on('value', function (snapshot) {
-	        _this2.setState({ list: snapshot.val() });
+	        var board = snapshot.val();
+	        _this2.setState({
+	          list: Object.keys(board || {}).map(function (key) {
+	            return board[key];
+	          })
+	        });
 	      });
 	    }
 	  }, {
