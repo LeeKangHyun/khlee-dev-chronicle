@@ -47,16 +47,15 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin
   ],
 
   module: {
     loaders: [
       {
         test: /.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
           cacheDirectory: true,
@@ -66,11 +65,8 @@ module.exports = {
       },
       {
         test   : /\.(scss|css)$/,
-        loaders: ['style', 'css', 'sass']
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
-  },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, 'src', 'stylesheets')]
   }
 };

@@ -1,8 +1,14 @@
-import express from 'express';
-import WebpackDevServer from 'webpack-dev-server';
-import Webpack from 'webpack';
-import morgan from 'morgan'; // HTTP REQUEST LOGGER // HTTP 요청을 로그하는 미들웨어
-import bodyParser from 'body-parser'; // PARSE HTML BODY // 요청에서 JSON을 파싱할때 사용되는 미들웨어
+// import express from 'express';
+// import WebpackDevServer from 'webpack-dev-server';
+// import Webpack from 'webpack';
+// import morgan from 'morgan'; // HTTP REQUEST LOGGER // HTTP 요청을 로그하는 미들웨어
+// import bodyParser from 'body-parser'; // PARSE HTML BODY // 요청에서 JSON을 파싱할때 사용되는 미들웨어
+
+var express = require('express');
+var WebpackDevServer = require('webpack-dev-server');
+var Webpack = require('webpack');
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
 
 const path = require('path');
 const app = express();

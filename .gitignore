@@ -6,3 +6,4 @@ firebase.json
 .eslintignore
 .babelrc
 public/bundle.js
+.idea/
